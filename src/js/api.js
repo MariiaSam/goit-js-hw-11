@@ -11,7 +11,7 @@ export async function fetchImg (searchValue, page = 1) {
         safesearch: true,
         per_page: 40,
         page: `${page}`,
-    })
-    const { data } = await axios.get(`${BASE_URL} ${params}`);
-    return data
+    });
+    const { data } = await axios.get(`${BASE_URL}?${params}`);
+    return data;
 }
