@@ -1,43 +1,77 @@
-body{
-    background-color: #d2ffc753;
+body {
+  background-color: #c7fffc53;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
-
-.div_form{
-    display: flex;
-    justify-content: center;
-    background-color: #ffcbcb;
-    height:80px;
-    margin-bottom: 12px;
+.div_form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #676b95;
+  height: 80px;
+  margin-bottom: 12px;
 }
 
-form{
-    margin-top: 32px;
+form {
+  margin-top: 32px;
+  display: flex;
+  justify-content: center;
 }
 
-input{
-        border-radius: 5px;
-        border-color: #407088;
+input {
+  border-radius: 5px;
+  border: 2px solid #407088;
+  padding: 10px;
+  width: 300px;
+  font-size: 16px;
 }
 
-button{
-        border-radius: 5px;
-        background-color: #ffb5b9;
-        border-color: #407088;
+button {
+  border-radius: 5px;
+  background-color: #ffb5b9;
+  border: 2px solid #407088;
+  padding: 10px 20px;
+  margin-left: 10px;
+  font-size: 16px;
+  cursor: pointer;
 }
 
-.gallery{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 20px;
 }
 
-a{
-    margin-bottom: 20px;
-        text-decoration: none;
-        color: #407088;
+a {
+  margin-bottom: 20px;
+  text-decoration: none;
+  color: #407088;
 }
 
-img{
-    width: 400px;
+img {
+  width: 400px;
 }
+
+.load-more {
+    display: block; 
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #ffb5b9;
+    border: 2px solid #407088;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+
+  .gallery_link {
+    text-decoration: none;
+    color: #407088;
+    transition: color 0.3s; 
+  }
+  
+  .gallery_link:hover {
+    color: #ff6b6b; 
+  }

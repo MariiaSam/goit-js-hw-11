@@ -1,7 +1,6 @@
 import axios from 'axios';
 
-const BASE_URL = 'https://pixabay.com/api/'; // базовий урл для всіх запитів Pixabay 
-
+const BASE_URL = 'https://pixabay.com/api/'; 
 export async function fetchImg (searchValue, page = 1) {
     const params = new URLSearchParams({
         key: '39912694-61df371fe923d6a404cf5e9ff',
@@ -13,5 +12,5 @@ export async function fetchImg (searchValue, page = 1) {
         page: `${page}`,
     });
     const { data } = await axios.get(`${BASE_URL}?${params}`);
-    return data;
+    return data; //повертає дані отриманні від Pixabay API  в результаті виконнання запиту
 }
