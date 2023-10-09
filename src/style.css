@@ -1,5 +1,5 @@
 body {
-  background-color: #c7fffc53;
+  background-color: #d118b653;
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
@@ -22,7 +22,7 @@ form {
 
 input {
   border-radius: 5px;
-  border: 2px solid #407088;
+  border: 2px solid #158cc7;
   padding: 10px;
   width: 300px;
   font-size: 16px;
@@ -30,7 +30,7 @@ input {
 
 button {
   border-radius: 5px;
-  background-color: #ffb5b9;
+  background-color: #3bb8b3;
   border: 2px solid #407088;
   padding: 10px 20px;
   margin-left: 10px;
@@ -39,10 +39,15 @@ button {
 }
 
 .gallery {
+  
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   padding: 20px;
+}
+
+.is-hidden{
+    display: none;
 }
 
 a {
@@ -53,25 +58,36 @@ a {
 
 img {
   width: 400px;
+  height: 350px;
 }
 
 .load-more {
     display: block; 
     margin: 20px auto;
     padding: 10px 20px;
-    background-color: #ffb5b9;
-    border: 2px solid #407088;
+    background-color: #2cb998;
+    border: 2px solid #475a63;
     border-radius: 5px;
     font-size: 16px;
     cursor: pointer;
   }
 
+  .load-more.is-hidden{
+    display: none;
+}
+.load-more:hover {
+    background-position: right center;
+    background-size: 200% auto;
+    -webkit-animation: pulse 2s infinite;
+    animation: pulse512 1.5s infinite;
+}
+
   .gallery_link {
     text-decoration: none;
-    color: #407088;
+    color: #264859;
     transition: color 0.3s; 
   }
   
   .gallery_link:hover {
-    color: #ff6b6b; 
+    color: #952a2a; 
   }
