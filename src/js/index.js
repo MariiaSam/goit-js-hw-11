@@ -18,18 +18,22 @@ let searchValue;
 let page = 1;
 let errorTimeout;
 
+// ф-ція відобр завантаження
 function showLoading() {
   Loading.arrows();
 }
 
+// ф-ція приховування завантаження
 function hideLoading() {
   Loading.remove();
 }
 
+// ф-ція очищення галереї
 function clearGallery() {
   gallery.innerHTML = '';
 }
 
+// ф-ція скидання сторінки
 function resetPage() {
   page = 1;
 }
@@ -39,18 +43,20 @@ function handleInvalidInput() {
   hideLoading();
 }
 
+// перевірка ивалідності введення
 function isValidInput(input) {
   return /^[a-zA-Z0-9\s]+$/.test(input);
 }
 
+//пошук та відображення зображень при відправці форми
 async function onSubmit(evt) {
   try {
     evt.preventDefault();
-    observer.unobserve(markup);
+    observer.unobserve(markup); // призупиняє спостереження
     clearGallery();
     resetPage();
     showLoading();
-    searchValue = form.elements.searchQuery.value.trim();
+    searchValue = form.elements.searchQuery.value.trim();//отримання значення, введене користувачем в поле пошуку
     if (!isValidInput(searchValue) || searchValue === '') {
       handleInvalidInput();
       return;
@@ -91,8 +97,10 @@ let options = {
   threshold: 0,
 };
 
+//для завантаження додаткових зображень, коли користувач прокручує сторінку вниз.
 let observer = new IntersectionObserver(handlerPagination, options);
 
+// завантаження додаткових зображень
 async function handlerPagination(entries) {
   for (let entry of entries) {
     if (entry.isIntersecting) {
